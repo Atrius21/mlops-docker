@@ -1,0 +1,2 @@
+location|lat|lng|color
+macdonalds|3.138081754708137|101.62147238423708|red

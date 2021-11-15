@@ -1,0 +1,2 @@
+location|lat|lng|color
+digihq|3.0686522251281847|101.56938806004743|orange
