@@ -117,9 +117,9 @@ Now you should put your code within the image. To do this you can simply use the
 COPY /app ./app
 ```
 
-### Spinning up the server
+### Running the python file
 
-Containers are usually meant to start and carry out a single task. This is why the `CMD` instruction was created. This is the command that will be run once a container that uses this image is started. In this case it is the command that will spin up the server by specifying the host and port. Notice that the command is written in a `JSON` like format having each part of the command as a string within a list:
+Containers are usually meant to start and carry out a single task. This is why the `CMD` instruction was created. This is the command that will be run once a container that uses this image is started. In this case it is the command that will run the python file. Notice that the command is written in a `JSON` like format having each part of the command as a string within a list:
 
 ```Dockerfile
 CMD ["python", "./app/main.py"]
