@@ -140,7 +140,7 @@ docker build -t map-gen:html-only .
 Now that the image has been successfully built it is time to run a container out of it. I'm, calling the container `my-mapgen`. You can do so by using the following command:
 
 ```bash
-docker run -dit --name my-mapgen -v /Users/maxyap/Desktop/notebook-projects/machine-learning-engineering-for-production-public/course4/week2-ungraded-labs/datafiles/:/datafiles/ map-gen:html-only
+docker run -dit --name my-mapgen -v /Users/maxyap/Desktop/notebook-projects/machine-learning-engineering-for-production-public/course4/python-server/datafiles/:/datafiles/ map-gen:html-only
 ```
 
 The objective of this container is to have docker take care of the python application while we pass in the latest data for it to produce the updated html file. We have to map a shared volume between the host and the container. This can be seen by using the `-v` command and what follows is the `source`:`host`
@@ -150,7 +150,7 @@ The objective of this container is to have docker take care of the python applic
 The files that are produced by the container stays inside docker. You will have to copy out the html file output to the host. It can be done with the follow commands:
 
 ```bash
-docker cp my-mapgen:/index.html /Users/maxyap/Desktop/notebook-projects/machine-learning-engineering-for-production-public/course4/week2-ungraded-labs/output/
+docker cp my-mapgen:/index.html /Users/maxyap/Desktop/notebook-projects/machine-learning-engineering-for-production-public/course4/python-server/output/
 ```
 
 ### Updating the data
